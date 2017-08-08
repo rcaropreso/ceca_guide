@@ -257,7 +257,7 @@ This subsystem can be accessed through the "Event Correlation" menu option:
 Wikipedia_
 .. _Wikipedia: http://www.wikipedia.org/
 
-.. image:: images/eventcorrelation_01.png
+    .. image:: images/eventcorrelation_01.png
 
 
 - What is this subsystem;
