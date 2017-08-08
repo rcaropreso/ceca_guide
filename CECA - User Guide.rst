@@ -254,10 +254,61 @@ triggering.
 
 This subsystem can be accessed through the "Event Correlation" menu option:
 
-Wikipedia_
-.. _Wikipedia: http://www.wikipedia.org/
+Ceca Correlation event menu
 
     .. image:: images/eventcorrelation_01.png
+
+
+After selecting this option, the following screen will be displayed:
+
+Ceca Correlation event screen
+
+    .. image:: images/eventcorrelation_02.png
+
+On this screen, user is able to define new rules, where each one corresponding to
+a single condition set of a decision table, by clicking on 'Add Rule' button:
+
+Ceca Correlation Event screen: Adding a Rule
+
+.. image:: images/eventcorrelation_03.png
+
+On this screen, it is possible to:
+- define the name of a rule in order to make its identification easier;
+- enable or disable the execution of a rule (on Status Selection List located at screen's right);
+- add conditions, by clicking on 'Add Condition' button;
+- add actions to be executed when the condition is evaluated to TRUE, by clicking on 'Add Action' button;
+- edit other rules which are shown on bottom of the screen.
+
+
+Ceca Correlation Event screen: Adding a condition
+
+.. image:: images/eventcorrelation_04.png
+
+After clicking in 'Add Condition', it is possible to select a variable (corresponding
+to a sensor previously added to system) and the condition to be evaluated simply by
+clicking on the fields and defining their values properly.
+
+Is it possible to add more than one condition for a rule. Therefore, all conditions
+associated with a rule must be evaluated to TRUE in order to trigger the respective actions,
+which means a boolean AND operation to be performed among them.
+
+Ceca Correlation Event screen: Adding actions
+
+.. image:: images/eventcorrelation_05.png
+
+In order to add actions for a rule, just follow the same approach employed on adding
+a condition. However, in this case the properties will be displayed according to
+selected action:
+- **alert** : create an alert of a given severity to be displayed on Ceca Dashboard;
+- **SMS** : sends an sms message to a given phone number;
+- **Voice** : performs a voice call to a given phone number;
+- **Cisco Spark**: creates an entry into a Group on Cisco Spark tool.
+
+It is necessary to point out that all actions will be executed **IN THE ORDER THEY
+ARE LISTED ON SCREEN**. To perform any changes on the execution order, simply drag
+and drop each action line accordingly.
+
+
 
 
 - What is this subsystem;
