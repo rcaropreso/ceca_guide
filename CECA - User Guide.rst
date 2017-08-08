@@ -270,9 +270,10 @@ a single condition set of a decision table, by clicking on 'Add Rule' button:
 
 Ceca Correlation Event screen: Adding a Rule
 
-.. image:: images/eventcorrelation_03.png
+    .. image:: images/eventcorrelation_03.png
 
 On this screen, it is possible to:
+
 - define the name of a rule in order to make its identification easier;
 - enable or disable the execution of a rule (on Status Selection List located at screen's right);
 - add conditions, by clicking on 'Add Condition' button;
@@ -282,7 +283,7 @@ On this screen, it is possible to:
 
 Ceca Correlation Event screen: Adding a condition
 
-.. image:: images/eventcorrelation_04.png
+    .. image:: images/eventcorrelation_04.png
 
 After clicking in 'Add Condition', it is possible to select a variable (corresponding
 to a sensor previously added to system) and the condition to be evaluated simply by
@@ -294,11 +295,12 @@ which means a boolean AND operation to be performed among them.
 
 Ceca Correlation Event screen: Adding actions
 
-.. image:: images/eventcorrelation_05.png
+    .. image:: images/eventcorrelation_05.png
 
 In order to add actions for a rule, just follow the same approach employed on adding
 a condition. However, in this case the properties will be displayed according to
 selected action:
+
 - **alert** : create an alert of a given severity to be displayed on Ceca Dashboard;
 - **SMS** : sends an sms message to a given phone number;
 - **Voice** : performs a voice call to a given phone number;
