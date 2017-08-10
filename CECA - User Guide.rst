@@ -310,23 +310,47 @@ It is necessary to point out that all actions will be executed **IN THE ORDER TH
 ARE LISTED ON SCREEN**. To perform any changes on the execution order, simply drag
 and drop each action line accordingly.
 
+Furthermore, the alerts triggered by a given condition are displayed on dashboard
+in same way alerts related to sensors' thresholds.
+
+    .. image:: images/eventcorrelation_06.png
+
+In the above screen it is possible to notice an alert triggered by a Correlation
+Event condition, involving two distinct sensors (ste_1_temp and comet_1_temp, respectively).
 
 
-
-- What is this subsystem;
-- How to setup it in dashboard (if applicable);
-- Dashboard screens (illustration), indicating user information displayed on screen.
-
-
-Model Diagram
-~~~~~~~~~~~~~
+**Model Diagram**
 
 - More technical details on the subsystem (tech report);
 - Uml or Graphical Diagrams.
 
 
-Setup and Workflow
-~~~~~~~~~~~~~~~~~~
+**Setup and Workflow**
+
+The basic workflow of a user-defined condition rule on Correlation Event subsystem
+can be depicted by the following diagram, in a high abstraction view:
+
+    .. image:: images/eventcorrelation_06.png
+
+The basic approach of the sequence showed on figure above is:
+
+- The user defines a Rule Event on dashboard as previously described;
+- All all data is persisted on CECA DB.
+- The Rule Manager Service checks the DB and updates or creates new 'Rule Monitor'
+instances, each of them in charge of checking a subset of rules accordingly;
+- Each Rule Monitor instance checks CECA's Sensor Data in order to validate conditions
+regarding a given rule;
+- Finally, each Rule Monitor takes the most appropriate actions (alerts to be showed
+on dashboard, voice calls) whenever the rule set is achieved.
+- Other CECA Subsystems validates the subsequent actions triggering in order to
+avoid "information flood" (like dozens of SMS calls, as an example).
+
+
+Condition Variables can be defined automatically by CECA among the data inserted on system (sensor values, person location) or can be predefined set of variables (time stamp, specific id or name).
+
+The Actions can be a pre-defined set of procedures that CECA is able to perform such as: make a call, trigger an specific alarm, send an email, send an SMS, etc. Some of actions can have 'Parameters' which can be defined, on their turn, by bootstrap procedures performed on CECA deployment.
+
+
 
 - Basic workflow description (describe how it does what it does);
 - Configuration files location (if applicable);
